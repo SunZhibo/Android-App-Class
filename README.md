@@ -14,3 +14,11 @@ Android App Developing Class Repository
 
 ![page](Figure/HW2/page.png)
 
+### Day3
+
+*   按照要求分别实现了3个练习
+    *   第一个是控制`Lottie`动画的进度
+    *   第二个是使用组和`animation`对`target`进行操作
+    *   第三个是使用`TabLayout`和`ViewPager`实现要求布局，经过5s加载动画后，在每个`tab`下加入第二次作业的`recyclerView`组件
+
+![page](Figure/HW3/page.png)
