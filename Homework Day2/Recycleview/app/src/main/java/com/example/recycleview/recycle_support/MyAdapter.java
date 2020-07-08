@@ -1,5 +1,6 @@
 package com.example.recycleview.recycle_support;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,33 +17,19 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private List<MessageData> mDataset;
+    private IOnItemClickListener mItemClickListener;
 
     public MyAdapter(List<MessageData> mDataset) {
         this.mDataset = mDataset;
     }
 
-    @NonNull
-    @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        View view = LayoutInflater.from(parent.getContext()).inflate(
-                R.layout.item_layout, parent, false);
-        return new MyViewHolder(view);
+    public interface IOnItemClickListener {
+        void onItemClick(int position);
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
-
-        int imageResource = mDataset.get(position).userImage;
-        String userName = mDataset.get(position).userName;
-        String lastTime = mDataset.get(position).lastTime;
-        String lastMessage = mDataset.get(position).lastMessage;
-        myViewHolder.setData(imageResource, userName, lastTime, lastMessage);
-    }
-
-    @Override
-    public int getItemCount() {
-        return mDataset.size();
+    public void setOnItemClickListener(IOnItemClickListener listener) {
+        mItemClickListener = listener;
+        Log.i("Click Log", "Set Click Listener");
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
@@ -69,4 +56,33 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+        View view = LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.item_layout, parent, false);
+        return new MyViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, final int position) {
+
+        int imageResource = mDataset.get(position).userImage;
+        String userName = mDataset.get(position).userName;
+        String lastTime = mDataset.get(position).lastTime;
+        String lastMessage = mDataset.get(position).lastMessage;
+        myViewHolder.setData(imageResource, userName, lastTime, lastMessage);
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mItemClickListener.onItemClick(position);
+            }
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return mDataset.size();
+    }
 }
