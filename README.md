@@ -22,3 +22,11 @@ Android App Developing Class Repository
     *   第三个是使用`TabLayout`和`ViewPager`实现要求布局，经过5s加载动画后，在每个`tab`下加入第二次作业的`recyclerView`组件
 
 ![page](Figure/HW3/page.png)
+
+### Day4
+
+*   按要求实现了
+    *   绘制表针，表针跳动，粗细长短不同
+    *   绘制表盘上的数字，用点绘制表盘刻度
+
+![page](Figure/HW4/page.png)
