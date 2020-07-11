@@ -30,3 +30,9 @@ Android App Developing Class Repository
     *   绘制表盘上的数字，用点绘制表盘刻度
 
 ![page](Figure/HW4/page.png)
+
+### Day 5
+
+*   按要求实现了5个#TODO，实现了上传图片，视频功能，并且能够根据ID对服务器的信息进行筛选，保留用户最新上传的信息。
+
+![page](Figure/HW5/page.png)
