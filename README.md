@@ -36,3 +36,12 @@ Android App Developing Class Repository
 *   按要求实现了5个#TODO，实现了上传图片，视频功能，并且能够根据ID对服务器的信息进行筛选，保留用户最新上传的信息。
 
 ![page](Figure/HW5/page.png)
+
+### Day 6
+
+*   按要求实现了
+    *   向数据库中写入查询删除数据
+    *   新增项，删除项，完成项，完成项后会置于所有其他未完成项下并标记删除线，再次点击`checkbox`会把已经完成的项再重新恢复为未完成状态并置顶
+    *   长按加号后会删除所有记录
+
+![page](Figure/HW6/page.png)
