@@ -45,3 +45,11 @@ Android App Developing Class Repository
     *   长按加号后会删除所有记录
 
 ![page](Figure/HW6/page.png)
+
+### Day 7
+
+*   按要求实现了
+    *   从网络加载图片并显示加载占位图，实现图片的圆角显示
+    *   从网络加载视频并播放，实现进度条会随播放进度改变，拖动进度条会改变视频播放进度
+
+![page](Figure/HW7/page.png)
