@@ -53,3 +53,11 @@ Android App Developing Class Repository
     *   从网络加载视频并播放，实现进度条会随播放进度改变，拖动进度条会改变视频播放进度
 
 ![page](Figure/HW7/page.png)
+
+### Day 8
+
+*   按要求实现了
+    *   自定义相机录像
+    *   录像后有自动循环播放的预览界面，预览结束后会确认会返回主页面
+
+<img src="Figure/HW8/page.png" alt="page" style="zoom:75%;" />
